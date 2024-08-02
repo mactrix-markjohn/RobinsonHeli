@@ -23,7 +23,6 @@
         <div id="unity-build-title">FirestoreWebGL</div>
       </div>
     </div>
-    
     <script>
       var canvas = document.querySelector("#unity-canvas");
 
@@ -102,7 +101,6 @@
         createUnityInstance(canvas, config, (progress) => {
           document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
               }).then((unityInstance) => {
-                window.unityInstance = unityInstance;
                 document.querySelector("#unity-loading-bar").style.display = "none";
                 document.querySelector("#unity-fullscreen-button").onclick = () => {
                   unityInstance.SetFullscreen(1);
@@ -115,22 +113,6 @@
 
       document.body.appendChild(script);
 
-    </script>
-    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
-    <script>
-      const firebaseApp = firebase.initializeApp({
-        apiKey: "AIzaSyDqr8tKkbJL7m0kcUtfcjytHUvehOHTOcA",
-        authDomain: "robinsonheli-45b47.firebaseapp.com",
-        projectId: "robinsonheli-45b47",
-        storageBucket: "robinsonheli-45b47.appspot.com",
-        messagingSenderId: "329887935441",
-        appId: "1:329887935441:web:6cba9c652befa3e19e0ef0",
-        measurementId: "G-V966BMWKYS"
-      });
-      const db = firebaseApp.firestore();
-      const auth = firebaseApp.auth();
     </script>
   </body>
 </html>
